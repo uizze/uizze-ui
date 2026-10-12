@@ -1,0 +1,27 @@
+name: Verify public skill installation
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - SKILL.md
+      - references/**
+      - LICENSE
+      - .github/workflows/install.yml
+  schedule:
+    - cron: '17 9 * * 1'
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: uizze-ui-install
+  cancel-in-progress: true
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Install the published skill for Codex
+        run: npx --yes skills@1.7.2 add uizze/uizze-ui --skill uizze-ui --agent codex --global --yes

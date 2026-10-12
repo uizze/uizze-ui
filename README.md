@@ -18,6 +18,10 @@ Explore Uizze's [mobile library](https://uizze.com/?platform=Mobile&utm_source=g
 
 For connected resources, use your client's Uizze connection at `https://uizze.com/mcp`. Hosted Uizze MCP requires a Uizze account with paid access; local UI/UX work is not blocked on signup.
 
+## Maintenance
+
+A public-source install check runs every Monday at 09:17 UTC and whenever the skill changes.
+
 ## License
 
 MIT. Copyright (c) 2026 UIZZE. Asset rights differ by material; preserve the licenses supplied with any Uizze assets.
